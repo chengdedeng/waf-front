@@ -71,7 +71,7 @@
             'Content-Type': 'application/json'
           }
         }).then((response) => {
-          this.$router.push('/')
+          window.location.reload()
         }, (response) => {
           console.log(response)
         })
