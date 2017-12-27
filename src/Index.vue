@@ -12,6 +12,7 @@
           </transition>
         </section>
       </div>
+      <Modal></Modal>
       <va-footer></va-footer>
     </div>
   </div>
@@ -22,6 +23,7 @@
   import Sidebar from 'Sidebar.vue'
   import Footer from 'Footer.vue'
   import slideMenuItems from './lib/slideMenuItems.js'
+  import Modal from './components/Modal.vue'
 
   export default {
     data () {
@@ -35,7 +37,8 @@
     components: {
       'va-header': Header,
       'va-sidebar': Sidebar,
-      'va-footer': Footer
+      'va-footer': Footer,
+      Modal
     },
     methods: {
       getMetrics: function () {
