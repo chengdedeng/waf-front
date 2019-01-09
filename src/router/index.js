@@ -18,6 +18,9 @@ import Buttons from 'pages/ui-elements/Buttons.vue'
 import Sliders from 'pages/ui-elements/Sliders.vue'
 import Timeline from 'pages/ui-elements/Timeline.vue'
 import Modals from 'pages/ui-elements/Modals.vue'
+import ArgsSettings from 'ArgsSettings.vue'
+import CookiesSettings from 'CookiesSettings.vue'
+import Upstream from 'Upstream.vue'
 
 Vue.use(Router)
 
@@ -93,6 +96,21 @@ export default new Router({
           path: 'ui-elements/modals',
           name: 'Modals',
           component: Modals
+        },
+        {
+          path: 'ui-argsSettings',
+          name: 'ArgsSettings',
+          component: ArgsSettings
+        },
+        {
+          path: 'ui-cookiesSettings',
+          name: 'CookiesSettings',
+          component: CookiesSettings
+        },
+        {
+          path: 'config/upstream',
+          name: 'Upstream',
+          component: Upstream
         }
       ]
     },

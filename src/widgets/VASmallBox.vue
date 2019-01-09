@@ -14,18 +14,18 @@
 </template>
 
 <script>
-export default {
-  name: 'SmallBox',
-  props: ['color', 'icon', 'title', 'description', 'moreText'],
-  computed: {
-    bgColor () {
-      return `bg-${this.color}`
-    }
-  },
-  methods: {
-    moreEvent () {
-      this.$emit('more-click')
+  export default {
+    name: 'SmallBox',
+    props: ['color', 'icon', 'title', 'description', 'moreText'],
+    computed: {
+      bgColor () {
+        return `bg-${this.color}`
+      }
+    },
+    methods: {
+      moreEvent () {
+        this.$emit('more-click')
+      }
     }
   }
-}
 </script>

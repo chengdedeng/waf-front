@@ -33,24 +33,24 @@
 </template>
 
 <script>
-export default {
-  name: 'va-carousel',
-  props: {
-    name: {
-      type: String,
-      default: 'carousel-example-generic'
+  export default {
+    name: 'va-carousel',
+    props: {
+      name: {
+        type: String,
+        default: 'carousel-example-generic'
+      },
+      list: {
+        type: Array,
+        default: []
+      },
+      startIndex: {
+        type: Number,
+        default: 0
+      }
     },
-    list: {
-      type: Array,
-      default: []
-    },
-    startIndex: {
-      type: Number,
-      default: 0
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

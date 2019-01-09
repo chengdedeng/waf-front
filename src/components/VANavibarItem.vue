@@ -4,12 +4,12 @@
 </template>
 
 <script>
-export default {
-  name: 'va-navibar-item',
-  created () {
+  export default {
+    name: 'va-navibar-item',
+    created () {
 
+    }
   }
-}
 </script>
 
 <style>

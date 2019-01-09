@@ -101,19 +101,19 @@
 </template>
 
 <script>
-import VAInfoBox from '../widgets/VAInfoBox.vue'
-import VADirectChat from '../widgets/VADirectChat.vue'
-import VAUserList from '../widgets/VAUserList.vue'
+  import VAInfoBox from '../widgets/VAInfoBox.vue'
+  import VADirectChat from '../widgets/VADirectChat.vue'
+  import VAUserList from '../widgets/VAUserList.vue'
 
-export default {
-  name: 'DashboardV2',
-  created () {
+  export default {
+    name: 'DashboardV2',
+    created () {
 
-  },
-  components: {
-    'va-info-box': VAInfoBox,
-    'va-direct-chat': VADirectChat,
-    'va-user-list': VAUserList
+    },
+    components: {
+      'va-info-box': VAInfoBox,
+      'va-direct-chat': VADirectChat,
+      'va-user-list': VAUserList
+    }
   }
-}
 </script>

@@ -14,32 +14,32 @@
 </template>
 
 <script>
-export default {
-  name: 'DirectChatItem',
-  props: {
-    name: {
-      type: String
+  export default {
+    name: 'DirectChatItem',
+    props: {
+      name: {
+        type: String
+      },
+      date: {
+        type: Date
+      },
+      profileImage: {
+        type: String
+      },
+      message: {
+        type: String
+      },
+      isMine: {
+        type: Boolean
+      }
     },
-    date: {
-      type: Date
+    computed: {
+      parseDate () {
+        return this.date
+      }
     },
-    profileImage: {
-      type: String
-    },
-    message: {
-      type: String
-    },
-    isMine: {
-      type: Boolean
-    }
-  },
-  computed: {
-    parseDate () {
-      return this.date
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

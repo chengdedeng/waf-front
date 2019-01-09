@@ -66,10 +66,10 @@
 </template>
 
 <script>
-export default {
-  name: 'UserList',
-  created () {
+  export default {
+    name: 'UserList',
+    created () {
 
+    }
   }
-}
 </script>

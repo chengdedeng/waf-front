@@ -8,24 +8,24 @@
 </template>
 
 <script>
-export default {
-  name: 'va-textarea',
-  props: {
-    placeholder: {
-      type: String,
-      default: ''
+  export default {
+    name: 'va-textarea',
+    props: {
+      placeholder: {
+        type: String,
+        default: ''
+      },
+      rowCount: {
+        type: Number,
+        default: 3
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
+      }
     },
-    rowCount: {
-      type: Number,
-      default: 3
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

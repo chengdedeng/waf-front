@@ -28,51 +28,51 @@
 </template>
 
 <script>
-export default {
-  name: 'va-box',
-  props: {
-    widgetType: {
-      type: String,
-      default: 'collapse'
-    },
-    title: {
-      type: String
-    },
-    content: {
-      type: String
-    },
-    theme: {
-      type: String
-    },
-    isOpen: {
-      type: Boolean,
-      default: true
-    },
-    isLoading: {
-      type: Boolean,
-      default: false
-    },
-    isSolid: {
-      type: Boolean,
-      default: false
-    },
-    isBorder: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    btnIcon () {
-      if (this.widgetType === 'collapse') {
-        return this.isOpen ? 'fa fa-minus' : 'fa fa-plus'
-      } else if (this.widgetType === 'remove') {
-        return 'fa fa-times'
+  export default {
+    name: 'va-box',
+    props: {
+      widgetType: {
+        type: String,
+        default: 'collapse'
+      },
+      title: {
+        type: String
+      },
+      content: {
+        type: String
+      },
+      theme: {
+        type: String
+      },
+      isOpen: {
+        type: Boolean,
+        default: true
+      },
+      isLoading: {
+        type: Boolean,
+        default: false
+      },
+      isSolid: {
+        type: Boolean,
+        default: false
+      },
+      isBorder: {
+        type: Boolean,
+        default: false
       }
-      return ''
-    }
-  },
-  created () {
+    },
+    computed: {
+      btnIcon () {
+        if (this.widgetType === 'collapse') {
+          return this.isOpen ? 'fa fa-minus' : 'fa fa-plus'
+        } else if (this.widgetType === 'remove') {
+          return 'fa fa-times'
+        }
+        return ''
+      }
+    },
+    created () {
 
+    }
   }
-}
 </script>

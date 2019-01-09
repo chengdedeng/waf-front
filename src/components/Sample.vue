@@ -259,7 +259,8 @@
                   <span data-toggle="tooltip" title="3 New Messages" class="badge bg-yellow">3</span>
                   <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                   </button>
-                  <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                  <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts"
+                          data-widget="chat-pane-toggle">
                     <i class="fa fa-comments"></i></button>
                   <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
                   </button>
@@ -276,7 +277,8 @@
                       <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                     </div>
                     <!-- /.direct-chat-info -->
-                    <img class="direct-chat-img" src="~admin-lte/dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                    <img class="direct-chat-img" src="~admin-lte/dist/img/user1-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       Is this template really for free? That's unbelievable!
                     </div>
@@ -291,7 +293,8 @@
                       <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                     </div>
                     <!-- /.direct-chat-info -->
-                    <img class="direct-chat-img" src="~admin-lte/dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                    <img class="direct-chat-img" src="~admin-lte/dist/img/user3-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       You better believe it!
                     </div>
@@ -306,7 +309,8 @@
                       <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
                     </div>
                     <!-- /.direct-chat-info -->
-                    <img class="direct-chat-img" src="~admin-lte/dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                    <img class="direct-chat-img" src="~admin-lte/dist/img/user1-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       Working with AdminLTE on a great new app! Wanna join?
                     </div>
@@ -321,7 +325,8 @@
                       <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
                     </div>
                     <!-- /.direct-chat-info -->
-                    <img class="direct-chat-img" src="~admin-lte/dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                    <img class="direct-chat-img" src="~admin-lte/dist/img/user3-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       I would love to.
                     </div>
@@ -435,7 +440,7 @@
                 <form action="#" method="post">
                   <div class="input-group">
                     <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                        <span class="input-group-btn">
+                    <span class="input-group-btn">
                           <button type="button" class="btn btn-warning btn-flat">Send</button>
                         </span>
                   </div>
@@ -627,7 +632,7 @@
             <div class="progress">
               <div class="progress-bar" style="width: 50%"></div>
             </div>
-                <span class="progress-description">
+            <span class="progress-description">
                   50% Increase in 30 Days
                 </span>
           </div>
@@ -644,7 +649,7 @@
             <div class="progress">
               <div class="progress-bar" style="width: 20%"></div>
             </div>
-                <span class="progress-description">
+            <span class="progress-description">
                   20% Increase in 30 Days
                 </span>
           </div>
@@ -661,7 +666,7 @@
             <div class="progress">
               <div class="progress-bar" style="width: 70%"></div>
             </div>
-                <span class="progress-description">
+            <span class="progress-description">
                   70% Increase in 30 Days
                 </span>
           </div>
@@ -678,7 +683,7 @@
             <div class="progress">
               <div class="progress-bar" style="width: 40%"></div>
             </div>
-                <span class="progress-description">
+            <span class="progress-description">
                   40% Increase in 30 Days
                 </span>
           </div>
@@ -756,7 +761,7 @@
                 <div class="product-info">
                   <a href="javascript:void(0)" class="product-title">Samsung TV
                     <span class="label label-warning pull-right">$1800</span></a>
-                      <span class="product-description">
+                  <span class="product-description">
                         Samsung 32" 1080p 60Hz LED Smart HDTV.
                       </span>
                 </div>
@@ -769,7 +774,7 @@
                 <div class="product-info">
                   <a href="javascript:void(0)" class="product-title">Bicycle
                     <span class="label label-info pull-right">$700</span></a>
-                      <span class="product-description">
+                  <span class="product-description">
                         26" Mongoose Dolomite Men's 7-speed, Navy Blue.
                       </span>
                 </div>
@@ -780,8 +785,9 @@
                   <img src="~admin-lte/dist/img/default-50x50.gif" alt="Product Image">
                 </div>
                 <div class="product-info">
-                  <a href="javascript:void(0)" class="product-title">Xbox One <span class="label label-danger pull-right">$350</span></a>
-                      <span class="product-description">
+                  <a href="javascript:void(0)" class="product-title">Xbox One <span
+                    class="label label-danger pull-right">$350</span></a>
+                  <span class="product-description">
                         Xbox One Console Bundle with Halo Master Chief Collection.
                       </span>
                 </div>
@@ -794,7 +800,7 @@
                 <div class="product-info">
                   <a href="javascript:void(0)" class="product-title">PlayStation 4
                     <span class="label label-success pull-right">$399</span></a>
-                      <span class="product-description">
+                  <span class="product-description">
                         PlayStation 4 500GB Console (PS4)
                       </span>
                 </div>
@@ -817,10 +823,10 @@
 </template>
 
 <script>
-export default {
-  name: 'sample',
-  created () {
+  export default {
+    name: 'sample',
+    created () {
 
+    }
   }
-}
 </script>

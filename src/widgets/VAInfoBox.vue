@@ -18,7 +18,7 @@
 </template>
 
 <script>
-// TODO: move to CONSTANT
+  // TODO: move to CONSTANT
   export default {
     name: 'va-info-box',
     props: {

@@ -3,89 +3,89 @@
     <row>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            bgColor="bg-aqua"
-            bgIcon="ion ion-ios-gear-outline"
-            text="Messages"
-            number="1410"
-            numberType="comma"
-          ></va-info-box>
+          bgColor="bg-aqua"
+          bgIcon="ion ion-ios-gear-outline"
+          text="Messages"
+          number="1410"
+          numberType="comma"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            bgColor="bg-green"
-            bgIcon="fa fa-flag-o"
-            text="Bookmarks"
-            number="410"
-            numberType="comma"
-          ></va-info-box>
+          bgColor="bg-green"
+          bgIcon="fa fa-flag-o"
+          text="Bookmarks"
+          number="410"
+          numberType="comma"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            bgColor="bg-yellow"
-            bgIcon="fa fa-files-o"
-            text="Uploads"
-            number="13648"
-            numberType="comma"
-          ></va-info-box>
+          bgColor="bg-yellow"
+          bgIcon="fa fa-files-o"
+          text="Uploads"
+          number="13648"
+          numberType="comma"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            bgColor="bg-red"
-            bgIcon="fa fa-star-o"
-            text="Likes"
-            number="93139"
-            numberType="comma"
-          ></va-info-box>
+          bgColor="bg-red"
+          bgIcon="fa fa-star-o"
+          text="Likes"
+          number="93139"
+          numberType="comma"
+        ></va-info-box>
       </div>
     </row>
     <row>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            wrapBgColor="bg-aqua"
-            bgIcon="fa fa-bookmark-o"
-            text="Bookmarks"
-            number="41410"
-            numberType="comma"
-            :isProgress="true"
-            :percentage="70"
-            progressDescription="70% Increase in 30 Days"
-          ></va-info-box>
+          wrapBgColor="bg-aqua"
+          bgIcon="fa fa-bookmark-o"
+          text="Bookmarks"
+          number="41410"
+          numberType="comma"
+          :isProgress="true"
+          :percentage="70"
+          progressDescription="70% Increase in 30 Days"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            wrapBgColor="bg-green"
-            bgIcon="fa fa-thumbs-o-up"
-            text="Likes"
-            number="41410"
-            numberType="comma"
-            :isProgress="true"
-            :percentage="70"
-            progressDescription="70% Increase in 30 Days"
-          ></va-info-box>
+          wrapBgColor="bg-green"
+          bgIcon="fa fa-thumbs-o-up"
+          text="Likes"
+          number="41410"
+          numberType="comma"
+          :isProgress="true"
+          :percentage="70"
+          progressDescription="70% Increase in 30 Days"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            wrapBgColor="bg-yellow"
-            bgIcon="fa fa-calendar"
-            text="Events"
-            number="41410"
-            numberType="comma"
-            :isProgress="true"
-            :percentage="70"
-            progressDescription="70% Increase in 30 Days"
-          ></va-info-box>
+          wrapBgColor="bg-yellow"
+          bgIcon="fa fa-calendar"
+          text="Events"
+          number="41410"
+          numberType="comma"
+          :isProgress="true"
+          :percentage="70"
+          progressDescription="70% Increase in 30 Days"
+        ></va-info-box>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <va-info-box
-            wrapBgColor="bg-red"
-            bgIcon="fa fa-comments-o"
-            text="Comments"
-            number="41410"
-            numberType="comma"
-            :isProgress="true"
-            :percentage="70"
-            progressDescription="70% Increase in 30 Days"
-          ></va-info-box>
+          wrapBgColor="bg-red"
+          bgIcon="fa fa-comments-o"
+          text="Comments"
+          number="41410"
+          numberType="comma"
+          :isProgress="true"
+          :percentage="70"
+          progressDescription="70% Increase in 30 Days"
+        ></va-info-box>
       </div>
     </row>
     <row>
@@ -307,249 +307,249 @@
       </div>
       <div class="col-md-6">
         <va-social-box
-            :name="socialBoxList[1].name"
-            :description="socialBoxList[1].description"
-            :profileImage="socialBoxList[1].profileImage"
-            :text="socialBoxList[1].text"
-            :buttons="socialBoxList[1].buttons"
-            :likeCount="socialBoxList[1].likeCount"
-            :commentCount="socialBoxList[1].commentCount"
-            :comments="socialBoxList[1].comments"
-            :attachments="socialBoxList[1].attachments"
-          ></va-social-box>
+          :name="socialBoxList[1].name"
+          :description="socialBoxList[1].description"
+          :profileImage="socialBoxList[1].profileImage"
+          :text="socialBoxList[1].text"
+          :buttons="socialBoxList[1].buttons"
+          :likeCount="socialBoxList[1].likeCount"
+          :commentCount="socialBoxList[1].commentCount"
+          :comments="socialBoxList[1].comments"
+          :attachments="socialBoxList[1].attachments"
+        ></va-social-box>
       </div>
     </row>
   </div>
 </template>
 
 <script>
-import VAInfoBox from '../widgets/VAInfoBox.vue'
-import VASmallBox from '../widgets/VASmallBox.vue'
-import VABox from '../widgets/VABox.vue'
-import VADirectChat from '../widgets/VADirectChat.vue'
-import VASocialUserV1 from '../widgets/VASocialUser.v1.vue'
-import VASocialUserV2 from '../widgets/VASocialUser.v2.vue'
-import VASocialBox from '../widgets/VASocialBox.vue'
+  import VAInfoBox from '../widgets/VAInfoBox.vue'
+  import VASmallBox from '../widgets/VASmallBox.vue'
+  import VABox from '../widgets/VABox.vue'
+  import VADirectChat from '../widgets/VADirectChat.vue'
+  import VASocialUserV1 from '../widgets/VASocialUser.v1.vue'
+  import VASocialUserV2 from '../widgets/VASocialUser.v2.vue'
+  import VASocialBox from '../widgets/VASocialBox.vue'
 
-export default {
-  name: 'WidgetsExample',
-  data () {
-    return {
-      talkList: [
-        {
-          name: 'Alexander Pierce',
-          date: new Date(),
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          message: `Is this template really for free? That's unbelievable`,
-          isMine: false
-        },
-        {
-          name: 'Sarah Bullock',
-          date: new Date(),
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          message: `You better believe it!`,
-          isMine: true
-        }
-      ],
-      contacts: [
-        {
-          name: 'Count Dracula',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: 'How have you been? I was...',
-          latestDate: new Date()
-        },
-        {
-          name: 'Sarah Doe',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: 'I will be waiting for...',
-          latestDate: new Date()
-        },
-        {
-          name: 'Nadia Jolie',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: `I'll call you back at...`,
-          latestDate: new Date()
-        },
-        {
-          name: 'Nora S. Vans',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: 'Where is your new...',
-          latestDate: new Date()
-        },
-        {
-          name: 'John K.',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: 'Can I take a look at...',
-          latestDate: new Date()
-        },
-        {
-          name: 'Kenneth M.',
-          profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
-          latestMessage: 'Naver mine I found...',
-          latestDate: new Date()
-        }
-      ],
-      socialDataList: [
-        [
+  export default {
+    name: 'WidgetsExample',
+    data () {
+      return {
+        talkList: [
           {
-            name: 'Projects',
-            badge: {
-              theme: 'bg-blue',
-              count: 31
-            }
+            name: 'Alexander Pierce',
+            date: new Date(),
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            message: `Is this template really for free? That's unbelievable`,
+            isMine: false
           },
           {
-            name: 'Tasks',
-            badge: {
-              theme: 'bg-aqua',
-              count: 5
-            }
-          },
-          {
-            name: 'Completed Projects',
-            badge: {
-              theme: 'bg-green',
-              count: 12
-            }
-          },
-          {
-            name: 'Followers',
-            badge: {
-              theme: 'bg-red',
-              count: 842
-            }
+            name: 'Sarah Bullock',
+            date: new Date(),
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            message: `You better believe it!`,
+            isMine: true
           }
         ],
-        [
+        contacts: [
           {
-            count: 3200,
-            text: 'SALES'
+            name: 'Count Dracula',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: 'How have you been? I was...',
+            latestDate: new Date()
           },
           {
-            count: 13000,
-            text: 'FOLLOWERS'
+            name: 'Sarah Doe',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: 'I will be waiting for...',
+            latestDate: new Date()
           },
           {
-            count: 35,
-            text: 'PRODUCTS'
+            name: 'Nadia Jolie',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: `I'll call you back at...`,
+            latestDate: new Date()
+          },
+          {
+            name: 'Nora S. Vans',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: 'Where is your new...',
+            latestDate: new Date()
+          },
+          {
+            name: 'John K.',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: 'Can I take a look at...',
+            latestDate: new Date()
+          },
+          {
+            name: 'Kenneth M.',
+            profileImage: 'http://cfile9.uf.tistory.com/image/25270C4853F7057D09BFD3',
+            latestMessage: 'Naver mine I found...',
+            latestDate: new Date()
           }
         ],
-        [
+        socialDataList: [
+          [
+            {
+              name: 'Projects',
+              badge: {
+                theme: 'bg-blue',
+                count: 31
+              }
+            },
+            {
+              name: 'Tasks',
+              badge: {
+                theme: 'bg-aqua',
+                count: 5
+              }
+            },
+            {
+              name: 'Completed Projects',
+              badge: {
+                theme: 'bg-green',
+                count: 12
+              }
+            },
+            {
+              name: 'Followers',
+              badge: {
+                theme: 'bg-red',
+                count: 842
+              }
+            }
+          ],
+          [
+            {
+              count: 3200,
+              text: 'SALES'
+            },
+            {
+              count: 13000,
+              text: 'FOLLOWERS'
+            },
+            {
+              count: 35,
+              text: 'PRODUCTS'
+            }
+          ],
+          [
+            {
+              count: 3200,
+              text: 'SALES'
+            },
+            {
+              count: 13000,
+              text: 'FOLLOWERS'
+            },
+            {
+              count: 35,
+              text: 'PRODUCTS'
+            }
+          ]
+        ],
+        socialBoxList: [
           {
-            count: 3200,
-            text: 'SALES'
+            name: 'Jonathan Burke Jr.',
+            profileImage: '/static/img/user1-128x128.jpg',
+            description: 'Shared publicly - 7:30 PM Today',
+            images: [
+              '/static/img/photo2.png'
+            ],
+            text: 'I took this photo this morning. What do you guys think?',
+            buttons: [
+              {
+                name: 'Share',
+                theme: 'fa fa-share',
+                onClick: this.clickToShare
+              },
+              {
+                name: 'Likes',
+                theme: 'fa fa-thumbs-o-up',
+                onClick: this.clickToLike
+              }
+            ],
+            likeCount: 127,
+            commentCount: 3,
+            comments: [
+              {
+                name: 'Maria Gonzales',
+                profileImage: '/static/img/user3-128x128.jpg',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                date: new Date()
+              },
+              {
+                name: 'Luna Stark',
+                profileImage: '/static/img/user4-128x128.jpg',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                date: new Date()
+              }
+            ]
           },
           {
-            count: 13000,
-            text: 'FOLLOWERS'
-          },
-          {
-            count: 35,
-            text: 'PRODUCTS'
+            name: 'Jonathan Burke Jr.',
+            profileImage: '/static/img/user1-128x128.jpg',
+            description: 'Shared publicly - 7:30 PM Today',
+            text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
+            buttons: [
+              {
+                name: 'Share',
+                theme: 'fa fa-share',
+                onClick: this.clickToShare
+              },
+              {
+                name: 'Likes',
+                theme: 'fa fa-thumbs-o-up',
+                onClick: this.clickToLike
+              }
+            ],
+            likeCount: 45,
+            commentCount: 2,
+            comments: [
+              {
+                name: 'Maria Gonzales',
+                profileImage: '/static/img/user3-128x128.jpg',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                date: new Date()
+              },
+              {
+                name: 'Nora Havisham',
+                profileImage: '/static/img/user5-128x128.jpg',
+                text: `The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
+                date: new Date()
+              }
+            ],
+            attachments: [
+              {
+                title: 'Lorem ipsum text generator',
+                image: '/static/img/photo1.png',
+                text: 'Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
+              }
+            ]
           }
         ]
-      ],
-      socialBoxList: [
-        {
-          name: 'Jonathan Burke Jr.',
-          profileImage: '/static/img/user1-128x128.jpg',
-          description: 'Shared publicly - 7:30 PM Today',
-          images: [
-            '/static/img/photo2.png'
-          ],
-          text: 'I took this photo this morning. What do you guys think?',
-          buttons: [
-            {
-              name: 'Share',
-              theme: 'fa fa-share',
-              onClick: this.clickToShare
-            },
-            {
-              name: 'Likes',
-              theme: 'fa fa-thumbs-o-up',
-              onClick: this.clickToLike
-            }
-          ],
-          likeCount: 127,
-          commentCount: 3,
-          comments: [
-            {
-              name: 'Maria Gonzales',
-              profileImage: '/static/img/user3-128x128.jpg',
-              text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-              date: new Date()
-            },
-            {
-              name: 'Luna Stark',
-              profileImage: '/static/img/user4-128x128.jpg',
-              text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-              date: new Date()
-            }
-          ]
-        },
-        {
-          name: 'Jonathan Burke Jr.',
-          profileImage: '/static/img/user1-128x128.jpg',
-          description: 'Shared publicly - 7:30 PM Today',
-          text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
-          buttons: [
-            {
-              name: 'Share',
-              theme: 'fa fa-share',
-              onClick: this.clickToShare
-            },
-            {
-              name: 'Likes',
-              theme: 'fa fa-thumbs-o-up',
-              onClick: this.clickToLike
-            }
-          ],
-          likeCount: 45,
-          commentCount: 2,
-          comments: [
-            {
-              name: 'Maria Gonzales',
-              profileImage: '/static/img/user3-128x128.jpg',
-              text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-              date: new Date()
-            },
-            {
-              name: 'Nora Havisham',
-              profileImage: '/static/img/user5-128x128.jpg',
-              text: `The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
-              date: new Date()
-            }
-          ],
-          attachments: [
-            {
-              title: 'Lorem ipsum text generator',
-              image: '/static/img/photo1.png',
-              text: 'Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
-            }
-          ]
-        }
-      ]
-    }
-  },
-  created () {
-
-  },
-  methods: {
-    clickToShare () {
-      alert('click to shere')
+      }
     },
-    clickToLike () {
-      alert('click to like')
+    created () {
+
+    },
+    methods: {
+      clickToShare () {
+        alert('click to shere')
+      },
+      clickToLike () {
+        alert('click to like')
+      }
+    },
+    components: {
+      'va-info-box': VAInfoBox,
+      'va-small-box': VASmallBox,
+      'va-box': VABox,
+      'va-direct-chat': VADirectChat,
+      'va-social-user-v1': VASocialUserV1,
+      'va-social-user-v2': VASocialUserV2,
+      'va-social-box': VASocialBox
     }
-  },
-  components: {
-    'va-info-box': VAInfoBox,
-    'va-small-box': VASmallBox,
-    'va-box': VABox,
-    'va-direct-chat': VADirectChat,
-    'va-social-user-v1': VASocialUserV1,
-    'va-social-user-v2': VASocialUserV2,
-    'va-social-box': VASocialBox
   }
-}
 </script>

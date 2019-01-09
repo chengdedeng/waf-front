@@ -13,45 +13,46 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    openModal () {
-      console.log(this.$bus)
-      this.$bus.$emit('modal-open', {
-        title: 'Hello',
-        description: 'description',
-        type: 'modal-primary',
-        confirmText: 'confirmText',
-        cancelText: 'cancelText',
-        confirmBefore: () => {
-          window.alert('confirmBefore')
-        },
-        confirmAfter: () => {
-          window.alert('confirmAfter')
-        },
-        cancelBefore: () => {
-          window.alert('cancelBefore')
-        },
-        cancelAfter: () => {
-          window.alert('cancelAfter')
-        }
-      })
+  export default {
+    methods: {
+      openModal () {
+        console.log(this.$bus)
+        this.$bus.$emit('modal-open', {
+          title: 'Hello',
+          description: 'description',
+          type: 'modal-primary',
+          confirmText: 'confirmText',
+          cancelText: 'cancelText',
+          confirmBefore: () => {
+            window.alert('confirmBefore')
+          },
+          confirmAfter: () => {
+            window.alert('confirmAfter')
+          },
+          cancelBefore: () => {
+            window.alert('cancelBefore')
+          },
+          cancelAfter: () => {
+            window.alert('cancelAfter')
+          }
+        })
+      }
     }
   }
-}
 </script>
 
 <style lang="css" scoped>
-.modal-example .modal {
-  position: relative;
-  top: auto;
-  bottom: auto;
-  right: auto;
-  left: auto;
-  display: block;
-  z-index: 1;
-}
-.modal-example .modal {
-  background: transparent !important;
-}
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    display: block;
+    z-index: 1;
+  }
+
+  .modal-example .modal {
+    background: transparent !important;
+  }
 </style>

@@ -6,24 +6,24 @@
   </select>
 </template>
 <script>
-export default {
-  name: 'va-select',
-  props: {
-    list: {
-      type: Array,
-      default: []
+  export default {
+    name: 'va-select',
+    props: {
+      list: {
+        type: Array,
+        default: []
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
+      },
+      isMultiple: {
+        type: Boolean,
+        default: false
+      }
     },
-    isDisabled: {
-      type: Boolean,
-      default: false
-    },
-    isMultiple: {
-      type: Boolean,
-      default: false
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

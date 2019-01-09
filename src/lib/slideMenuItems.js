@@ -52,15 +52,38 @@ module.exports = [
     ]
   },
   {
+    type: 'tree',
+    icon: 'fa fa-edit',
+    name: 'Settings',
+    items: [
+      {
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'Args',
+        router: {
+          name: 'ArgsSettings'
+        }
+      },
+      {
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'Cookis',
+        router: {
+          name: 'CookiesSettings'
+        }
+      }
+    ]
+  },
+  {
     type: 'item',
     icon: 'fa fa-th',
-    name: 'Widgets',
+    name: 'Upstream',
     badge: {
       type: 'String',
       data: 'new'
     },
     router: {
-      name: 'WidgetsExample'
+      name: 'Upstream'
     }
   },
   {

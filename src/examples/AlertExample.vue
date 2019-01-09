@@ -135,17 +135,16 @@
     </div>
 
 
-
   </div>
 </template>
 <script>
-import VAAlert from '../components/VAAlert.vue'
+  import VAAlert from '../components/VAAlert.vue'
 
-export default {
-  components: {
-    'va-alert': VAAlert
+  export default {
+    components: {
+      'va-alert': VAAlert
+    }
   }
-}
 </script>
 <style lang="css">
 </style>

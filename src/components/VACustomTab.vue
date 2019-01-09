@@ -13,34 +13,34 @@
 </template>
 
 <script>
-export default {
-  name: 'va-custom-tab',
-  props: {
-    tabsClass: {
-      type: String,
-      default: ''
-    }
-  },
-  data () {
-    return {
-      tabList: []
-    }
-  },
-  mounted () {
-    for (const i in this.$slots.content) {
-      var vm = this.$slots.content[i]
-
-      if (typeof vm !== 'object') {
-        continue
+  export default {
+    name: 'va-custom-tab',
+    props: {
+      tabsClass: {
+        type: String,
+        default: ''
       }
-      vm.elm.className += ' tab-pane'
-      this.tabList.push({
-        id: '#' + vm.data.attrs.id,
-        class: vm.data.staticClass || '',
-        title: vm.data.attrs.title
-      })
+    },
+    data () {
+      return {
+        tabList: []
+      }
+    },
+    mounted () {
+      for (const i in this.$slots.content) {
+        var vm = this.$slots.content[i]
+
+        if (typeof vm !== 'object') {
+          continue
+        }
+        vm.elm.className += ' tab-pane'
+        this.tabList.push({
+          id: '#' + vm.data.attrs.id,
+          class: vm.data.staticClass || '',
+          title: vm.data.attrs.title
+        })
+      }
     }
   }
-}
 </script>
 

@@ -2,7 +2,8 @@
   <!-- Widget: user widget style 1 -->
   <div class="box box-widget widget-user">
     <!-- Add the bg color to the header using any of the bg-* classes -->
-    <div class="widget-user-header" :class="isBackgroundImage?'bg-black':theme" :style="isBackgroundImage?`background: url('${profileImage}') center center;`:''">
+    <div class="widget-user-header" :class="isBackgroundImage?'bg-black':theme"
+         :style="isBackgroundImage?`background: url('${profileImage}') center center;`:''">
       <h3 class="widget-user-username">{{ name }}</h3>
       <h5 class="widget-user-desc">{{ description }}</h5>
     </div>
@@ -42,32 +43,32 @@
 </template>
 
 <script>
-export default {
-  name: 'va-social-user-v1',
-  props: {
-    theme: {
-      type: String,
-      default: 'bg-aqua-active'
+  export default {
+    name: 'va-social-user-v1',
+    props: {
+      theme: {
+        type: String,
+        default: 'bg-aqua-active'
+      },
+      isBackgroundImage: {
+        type: Boolean,
+        default: false
+      },
+      name: {
+        type: String
+      },
+      description: {
+        type: String
+      },
+      profileImage: {
+        type: String
+      },
+      infoList: {
+        type: Array
+      }
     },
-    isBackgroundImage: {
-      type: Boolean,
-      default: false
-    },
-    name: {
-      type: String
-    },
-    description: {
-      type: String
-    },
-    profileImage: {
-      type: String
-    },
-    infoList: {
-      type: Array
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

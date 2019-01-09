@@ -25,16 +25,16 @@
 </template>
 
 <script>
-export default {
-  name: 'va-arccordion',
-  props: {
-    list: {
-      type: Array,
-      default: []
-    }
-  },
-  created () {
+  export default {
+    name: 'va-arccordion',
+    props: {
+      list: {
+        type: Array,
+        default: []
+      }
+    },
+    created () {
 
+    }
   }
-}
 </script>

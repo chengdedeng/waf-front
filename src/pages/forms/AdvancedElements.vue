@@ -5,12 +5,12 @@
 </template>
 
 <script>
-export default {
-  name: 'advanced-elements',
-  created () {
+  export default {
+    name: 'advanced-elements',
+    created () {
 
+    }
   }
-}
 </script>
 
 <style>

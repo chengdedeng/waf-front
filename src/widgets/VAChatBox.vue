@@ -88,13 +88,13 @@
 </template>
 
 <script>
-export default {
-  name: 'ChatBox',
-  mounted () {
-    var chatBoxElement = this.$el.querySelector('.id-chat-box')
-    $(chatBoxElement).slimScroll({
-      height: '250px'
-    })
+  export default {
+    name: 'ChatBox',
+    mounted () {
+      var chatBoxElement = this.$el.querySelector('.id-chat-box')
+      $(chatBoxElement).slimScroll({
+        height: '250px'
+      })
+    }
   }
-}
 </script>

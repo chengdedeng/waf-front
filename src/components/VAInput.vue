@@ -1,7 +1,7 @@
 <template>
 
   <div v-if="isHorizontal"
-    class="form-group"
+       class="form-group"
   >
 
     <label :for="vaId" class="col-sm-2 control-label">{{ title }}</label>
@@ -29,56 +29,56 @@
 </template>
 
 <script>
-export default {
-  name: 'va-input',
-  props: {
-    type: {
-      type: String,
-      default: 'text'
-    },
-    vaId: {
-      type: String
-    },
-    placeholder: {
-      type: String,
-      default: 'Enter Text...'
-    },
-    size: {
-      type: String
-    },
-    value: {
-      type: String
-    },
-    isFormControl: {
-      type: Boolean,
-      default: true
-    },
-    isHorizontal: {
-      type: Boolean,
-      default: false
-    },
-    title: {
-      type: String
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    getSize () {
-      if (!this.size) {
-        return ''
+  export default {
+    name: 'va-input',
+    props: {
+      type: {
+        type: String,
+        default: 'text'
+      },
+      vaId: {
+        type: String
+      },
+      placeholder: {
+        type: String,
+        default: 'Enter Text...'
+      },
+      size: {
+        type: String
+      },
+      value: {
+        type: String
+      },
+      isFormControl: {
+        type: Boolean,
+        default: true
+      },
+      isHorizontal: {
+        type: Boolean,
+        default: false
+      },
+      title: {
+        type: String
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
       }
-
-      return 'input-' + this.size
     },
-    formControl () {
-      return this.isFormControl ? 'form-control' : ''
-    }
-  },
-  created () {
+    computed: {
+      getSize () {
+        if (!this.size) {
+          return ''
+        }
 
+        return 'input-' + this.size
+      },
+      formControl () {
+        return this.isFormControl ? 'form-control' : ''
+      }
+    },
+    created () {
+
+    }
   }
-}
 </script>

@@ -15,30 +15,30 @@
 </template>
 
 <script>
-export default {
-  name: 'SocialBoxComment',
-  props: {
-    name: {
-      type: String
+  export default {
+    name: 'SocialBoxComment',
+    props: {
+      name: {
+        type: String
+      },
+      profileImage: {
+        type: String
+      },
+      date: {
+        type: Date
+      },
+      text: {
+        type: String
+      }
     },
-    profileImage: {
-      type: String
+    computed: {
+      parseDate () {
+        // TODO: 시간 파싱 개발해야 합니다.
+        return this.date.toDateString()
+      }
     },
-    date: {
-      type: Date
-    },
-    text: {
-      type: String
-    }
-  },
-  computed: {
-    parseDate () {
-      // TODO: 시간 파싱 개발해야 합니다.
-      return this.date.toDateString()
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

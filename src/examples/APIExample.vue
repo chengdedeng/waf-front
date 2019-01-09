@@ -6,23 +6,23 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
 
-export default {
-  created () {
-    this.fetchProduct()
-  },
-  computed: {
-    ...mapGetters([
-      'totalProduct'
-    ])
-  },
-  methods: {
-    ...mapActions([
-      'fetchProduct'
-    ])
+  export default {
+    created () {
+      this.fetchProduct()
+    },
+    computed: {
+      ...mapGetters([
+        'totalProduct'
+      ])
+    },
+    methods: {
+      ...mapActions([
+        'fetchProduct'
+      ])
+    }
   }
-}
 </script>
 
 <style lang="css">

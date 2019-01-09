@@ -16,30 +16,30 @@
 </template>
 
 <script>
-export default {
-  name: 'DirectChatContact',
-  props: {
-    name: {
-      type: String
+  export default {
+    name: 'DirectChatContact',
+    props: {
+      name: {
+        type: String
+      },
+      profileImage: {
+        type: String
+      },
+      latestDate: {
+        type: Date
+      },
+      latestMessage: {
+        type: String
+      }
     },
-    profileImage: {
-      type: String
+    computed: {
+      parseDate () {
+        // TODO: 시간 파싱 개발해야 합니다.
+        return this.latestDate.toDateString()
+      }
     },
-    latestDate: {
-      type: Date
-    },
-    latestMessage: {
-      type: String
-    }
-  },
-  computed: {
-    parseDate () {
-      // TODO: 시간 파싱 개발해야 합니다.
-      return this.latestDate.toDateString()
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>

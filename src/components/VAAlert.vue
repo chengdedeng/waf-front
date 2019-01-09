@@ -6,32 +6,32 @@
   </div>
 </template>
 <script>
-const AlertTypes = ['success', 'info', 'warning', 'danger']
-export default {
-  name: 'va-alert',
-  props: {
-    type: {
-      default: 'success',
-      validator: function (value) {
-        return AlertTypes.includes(value)
+  const AlertTypes = ['success', 'info', 'warning', 'danger']
+  export default {
+    name: 'va-alert',
+    props: {
+      type: {
+        default: 'success',
+        validator: function (value) {
+          return AlertTypes.includes(value)
+        }
+      },
+      dismissible: {
+        default: false
       }
     },
-    dismissible: {
-      default: false
-    }
-  },
-  computed: {
-    classObject () {
-      return {
-        'alert-success': this.type === 'success',
-        'alert-info': this.type === 'info',
-        'alert-warning': this.type === 'warning',
-        'alert-danger': this.type === 'danger',
-        'alert-dissmissible': this.dismissible
+    computed: {
+      classObject () {
+        return {
+          'alert-success': this.type === 'success',
+          'alert-info': this.type === 'info',
+          'alert-warning': this.type === 'warning',
+          'alert-danger': this.type === 'danger',
+          'alert-dissmissible': this.dismissible
+        }
       }
     }
   }
-}
 </script>
 <style lang="css">
 </style>

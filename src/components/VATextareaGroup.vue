@@ -10,33 +10,33 @@
 </template>
 
 <script>
-import VATextarea from './VATextarea'
+  import VATextarea from './VATextarea'
 
-export default {
-  name: 'va-textarea-group',
-  props: {
-    title: {
-      type: String,
-      default: 'Textarea'
+  export default {
+    name: 'va-textarea-group',
+    props: {
+      title: {
+        type: String,
+        default: 'Textarea'
+      },
+      rowCount: {
+        type: Number,
+        default: 3
+      },
+      placeholder: {
+        type: String,
+        defualt: ''
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
+      }
     },
-    rowCount: {
-      type: Number,
-      default: 3
+    created () {
+
     },
-    placeholder: {
-      type: String,
-      defualt: ''
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false
+    components: {
+      'va-textarea': VATextarea
     }
-  },
-  created () {
-
-  },
-  components: {
-    'va-textarea': VATextarea
   }
-}
 </script>

@@ -22,7 +22,8 @@
           <input type="text" class="form-control" name="subject" placeholder="Subject">
         </div>
         <div>
-          <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+          <textarea class="textarea" placeholder="Message"
+                    style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
         </div>
       </form>
     </div>
@@ -36,12 +37,12 @@
 
 <script>
 
-export default {
-  name: 'QuickMail',
-  mounted () {
-    // bootstrap WYSIHTML5 - text editor
-    $('.textarea').wysihtml5()
+  export default {
+    name: 'QuickMail',
+    mounted () {
+      // bootstrap WYSIHTML5 - text editor
+      $('.textarea').wysihtml5()
+    }
   }
-}
 
 </script>

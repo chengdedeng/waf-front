@@ -9,10 +9,13 @@ import router from './router'
 import App from './App'
 import EventBus from './lib/eventBus.js'
 import axios from 'axios'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
 
 Vue.prototype.$bus = EventBus
 Vue.prototype.$http = axios
-
 Vue.prototype.$http.defaults.withCredentials = true
 
 Object.defineProperties(Vue.prototype, {
@@ -29,15 +32,13 @@ Object.defineProperties(Vue.prototype, {
   }
 })
 
-function setCookie (cName, value, expiredays) {
+Vue.prototype.setCookie = function (cName, value, expiredays) {
   let exdate = new Date()
   exdate.setDate(exdate.getDate() + expiredays)
   document.cookie = cName + '=' + escape(value) + ((expiredays == null) ? '' : ';expires=' + exdate.toGMTString())
 }
 
-Vue.prototype.setCookie = setCookie
-
-function getCookie (name) {
+Vue.prototype.getCookie = function (name) {
   let regExp = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
   let sessionId = document.cookie.match(regExp)
   if (sessionId) {
@@ -47,9 +48,7 @@ function getCookie (name) {
   }
 }
 
-Vue.prototype.getCookie = getCookie
-
-function delCookie (name) {
+Vue.prototype.delCookie = function (name) {
   let exp = new Date()
   exp.setTime(exp.getTime() - 1)
   let cval = getCookie(name)
@@ -58,14 +57,13 @@ function delCookie (name) {
   }
 }
 
-Vue.prototype.delCookie = delCookie
-
 Vue.prototype.$http.interceptors.response.use(
   response => {
-    if (response.status === 200 && response.data.code === 403) {
-      delCookie('JSESSIONID')
+    if (response.status === 200 && response.data.code === 401) {
+      delCookie('WAFTOKEN')
       router.push('/login')
     }
+    return response
   },
   error => {
     return Promise.reject(error.toString())
@@ -83,7 +81,7 @@ new Vue({
   },
   methods: {
     checkLogin () {
-      if (!getCookie('JSESSIONID')) {
+      if (!this.getCookie('WAFTOKEN')) {
         this.$router.push('/login')
       } else {
         this.$router.push('/')

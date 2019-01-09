@@ -5,10 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: 'Timeline',
-  created () {
+  export default {
+    name: 'Timeline',
+    created () {
 
+    }
   }
-}
 </script>

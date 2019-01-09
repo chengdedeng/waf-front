@@ -7,13 +7,13 @@
       <div class="box-body">
         <row>
           <va-color-palette-set v-for="color in colors[0]"
-            :color="color"
+                                :color="color"
           ></va-color-palette-set>
         </row>
         <!-- /.row -->
         <row>
           <va-color-palette-set v-for="color in colors[1]"
-            :color="color"
+                                :color="color"
           ></va-color-palette-set>
         </row>
         <!-- /.row -->
@@ -134,52 +134,67 @@
           <li slot="nav"
               class="dropdown">
             <a class="dropdown-toggle"
-              data-toggle="dropdown"
-              href="#">
-                                    Dropdown <span class="caret"></span>
-                                  </a>
+               data-toggle="dropdown"
+               href="#">
+              Dropdown <span class="caret"></span>
+            </a>
             <ul class="dropdown-menu">
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Action</a></li>
+                                         tabindex="-1"
+                                         href="#">Action</a></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Another action</a></li>
+                                         tabindex="-1"
+                                         href="#">Another action</a></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Something else here</a></li>
+                                         tabindex="-1"
+                                         href="#">Something else here</a></li>
               <li role="presentation"
                   class="divider"></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Separated link</a></li>
+                                         tabindex="-1"
+                                         href="#">Separated link</a></li>
             </ul>
           </li>
 
           <li slot="nav"
               class="pull-right"><a href="#"
-              class="text-muted"><i class="fa fa-gear"></i></a></li>
+                                    class="text-muted"><i class="fa fa-gear"></i></a></li>
 
           <div slot="content"
-              class="active"
-              id="tab_1"
-              title="Tab 1">
+               class="active"
+               id="tab_1"
+               title="Tab 1">
             <b>How to use:</b>
 
-            <p>Exactly like the original bootstrap tabs except you should use the custom wrapper <code>.nav-tabs-custom</code> to achieve this style.</p>
-            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+            <p>Exactly like the original bootstrap tabs except you should use the custom wrapper
+              <code>.nav-tabs-custom</code> to achieve this style.</p>
+            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
+            enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for
+            the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere
+            tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the
+            present moment; and yet I feel that I never was a greater artist than now.
           </div>
           <!-- /.tab-pane -->
           <div slot="content"
-              id="tab_2"
-              title="Tab 2">
-            The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+               id="tab_2"
+               title="Tab 2">
+            The European languages are members of the same family. Their separate existence is a myth. For science,
+            music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their
+            pronunciation and their most common words. Everyone realizes why a new common language would be desirable:
+            one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform
+            grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting
+            language is more simple and regular than that of the individual languages.
           </div>
           <!-- /.tab-pane -->
           <div slot="content"
-              id="tab_3"
-              title="Tab 3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               id="tab_3"
+               title="Tab 3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <!-- /.tab-pane -->
 
@@ -197,25 +212,25 @@
           <li slot="nav"
               class="dropdown">
             <a class="dropdown-toggle"
-              data-toggle="dropdown"
-              href="#">
+               data-toggle="dropdown"
+               href="#">
               Dropdown <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Action</a></li>
+                                         tabindex="-1"
+                                         href="#">Action</a></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Another action</a></li>
+                                         tabindex="-1"
+                                         href="#">Another action</a></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Something else here</a></li>
+                                         tabindex="-1"
+                                         href="#">Something else here</a></li>
               <li role="presentation"
                   class="divider"></li>
               <li role="presentation"><a role="menuitem"
-                  tabindex="-1"
-                  href="#">Separated link</a></li>
+                                         tabindex="-1"
+                                         href="#">Separated link</a></li>
             </ul>
           </li>
 
@@ -223,25 +238,40 @@
 
 
           <div slot="content"
-              class="active"
-              id="tab_1"
-              title="Tab 1">
+               class="active"
+               id="tab_1"
+               title="Tab 1">
             <b>How to use:</b>
 
-            <p>Exactly like the original bootstrap tabs except you should use the custom wrapper <code>.nav-tabs-custom</code> to achieve this style.</p>
-            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+            <p>Exactly like the original bootstrap tabs except you should use the custom wrapper
+              <code>.nav-tabs-custom</code> to achieve this style.</p>
+            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
+            enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for
+            the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere
+            tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the
+            present moment; and yet I feel that I never was a greater artist than now.
           </div>
           <!-- /.tab-pane -->
           <div slot="content"
-              id="tab_2"
-              title="Tab 2">
-            The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+               id="tab_2"
+               title="Tab 2">
+            The European languages are members of the same family. Their separate existence is a myth. For science,
+            music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their
+            pronunciation and their most common words. Everyone realizes why a new common language would be desirable:
+            one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform
+            grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting
+            language is more simple and regular than that of the individual languages.
           </div>
           <!-- /.tab-pane -->
           <div slot="content"
-              id="tab_3"
-              title="Tab 3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               id="tab_3"
+               title="Tab 3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <!-- /.tab-pane -->
 
@@ -314,7 +344,7 @@
           title="Progress bars"
           :isSolid="true"
           widgetType=""
-          >
+        >
           <div slot="content">
 
 
@@ -367,8 +397,8 @@
       <div class="col-md-6">
 
         <va-box title="Vertical Progress Bars Different Sizes"
-            :isSolid="true"
-            widgetType="">
+                :isSolid="true"
+                widgetType="">
           <div slot="content" class="text-center">
 
             <p>By adding the class <code>.vertical</code> and <code>.progress-sm</code>, <code>.progress-xs</code> or
@@ -593,7 +623,6 @@
         </va-box>
 
 
-
       </div>
 
     </row>
@@ -610,10 +639,10 @@
 
           <div slot="content">
 
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-              </blockquote>
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+            </blockquote>
 
           </div>
         </va-box>
@@ -630,10 +659,10 @@
 
           <div slot="content">
 
-              <blockquote class="pull-right">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-              </blockquote>
+            <blockquote class="pull-right">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+            </blockquote>
 
           </div>
         </va-box>
@@ -805,112 +834,112 @@
 </template>
 
 <script>
-import VAColorPaletteSet from '../../components/VAColorPaletteSet.vue'
-import VAAlert from '../../components/VAAlert.vue'
-import VACallout from '../../components/VACallout.vue'
-import VACustomTab from '../../components/VACustomTab.vue'
-import VABox from '../../widgets/VABox.vue'
-import VAProgressBar from '../../components/VAProgressBar.vue'
-import VAAccordion from '../../components/VAAccordion.vue'
-import VACarousel from '../../components/VACarousel.vue'
-import VAText from '../../components/VAText.vue'
+  import VAColorPaletteSet from '../../components/VAColorPaletteSet.vue'
+  import VAAlert from '../../components/VAAlert.vue'
+  import VACallout from '../../components/VACallout.vue'
+  import VACustomTab from '../../components/VACustomTab.vue'
+  import VABox from '../../widgets/VABox.vue'
+  import VAProgressBar from '../../components/VAProgressBar.vue'
+  import VAAccordion from '../../components/VAAccordion.vue'
+  import VACarousel from '../../components/VACarousel.vue'
+  import VAText from '../../components/VAText.vue'
 
-export default {
-  name: 'General',
-  data () {
-    return {
-      colors: [
-        ['Primary', 'Info', 'Success', 'Warning', 'Danger', 'Gray'],
-        ['Navi', 'Teal', 'Purple', 'Orange', 'Maroon', 'Black']
-      ],
-      accordion: {
-        list: [
-          {
-            id: 'collapseOne',
-            type: 'primary',
-            title: 'Collapsible Group Item #1',
-            content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
-          },
-          {
-            id: 'collapseTwo',
-            type: 'danger',
-            title: 'Collapsible Group Danger',
-            content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
-          },
-          {
-            id: 'collapseThree',
-            type: 'success',
-            title: 'Collapsible Group Success',
-            content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
-          }
-        ]
-      },
-      carousel: {
-        name: 'carousel-example',
-        list: [
-          {
-            image: 'http://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap',
-            text: 'First Slide'
-          },
-          {
-            image: 'http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap',
-            text: 'Second Slide'
-          },
-          {
-            image: 'http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap',
-            text: 'Third Slide'
-          }
-        ]
+  export default {
+    name: 'General',
+    data () {
+      return {
+        colors: [
+          ['Primary', 'Info', 'Success', 'Warning', 'Danger', 'Gray'],
+          ['Navi', 'Teal', 'Purple', 'Orange', 'Maroon', 'Black']
+        ],
+        accordion: {
+          list: [
+            {
+              id: 'collapseOne',
+              type: 'primary',
+              title: 'Collapsible Group Item #1',
+              content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
+            },
+            {
+              id: 'collapseTwo',
+              type: 'danger',
+              title: 'Collapsible Group Danger',
+              content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
+            },
+            {
+              id: 'collapseThree',
+              type: 'success',
+              title: 'Collapsible Group Success',
+              content: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.`
+            }
+          ]
+        },
+        carousel: {
+          name: 'carousel-example',
+          list: [
+            {
+              image: 'http://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap',
+              text: 'First Slide'
+            },
+            {
+              image: 'http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap',
+              text: 'Second Slide'
+            },
+            {
+              image: 'http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap',
+              text: 'Third Slide'
+            }
+          ]
+        }
       }
-    }
-  },
-  created () {
+    },
+    created () {
 
-  },
-  components: {
-    'va-color-palette-set': VAColorPaletteSet,
-    'va-alert': VAAlert,
-    'va-callout': VACallout,
-    'va-custom-tab': VACustomTab,
-    'va-box': VABox,
-    'va-progress-bar': VAProgressBar,
-    'va-accordion': VAAccordion,
-    'va-carousel': VACarousel,
-    'va-text': VAText
+    },
+    components: {
+      'va-color-palette-set': VAColorPaletteSet,
+      'va-alert': VAAlert,
+      'va-callout': VACallout,
+      'va-custom-tab': VACustomTab,
+      'va-box': VABox,
+      'va-progress-bar': VAProgressBar,
+      'va-accordion': VAAccordion,
+      'va-carousel': VACarousel,
+      'va-text': VAText
+    }
   }
-}
 </script>
 
 <style>
 
-.color-palette {
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-}
+  .color-palette {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
 
-.color-palette-set {
-  margin-bottom: 15px;
-}
+  .color-palette-set {
+    margin-bottom: 15px;
+  }
 
-.color-palette span {
-  display: none;
-  font-size: 12px;
-}
+  .color-palette span {
+    display: none;
+    font-size: 12px;
+  }
 
-.color-palette:hover span {
-  display: block;
-}
+  .color-palette:hover span {
+    display: block;
+  }
 
-.color-palette-box h4 {
-  position: absolute;
-  top: 100%;
-  left: 25px;
-  margin-top: -40px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
-  display: block;
-  z-index: 7;
-}
+  .color-palette-box h4 {
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    margin-top: -40px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    display: block;
+    z-index: 7;
+  }
 
 </style>

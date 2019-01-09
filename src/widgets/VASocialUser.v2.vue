@@ -12,7 +12,8 @@
     </div>
     <div class="box-footer no-padding">
       <ul class="nav nav-stacked">
-        <li v-for="item in list"><a href="#">{{ item.name }} <span class="pull-right badge" :class="item.badge.theme">{{ item.badge.count }}</span></a></li>
+        <li v-for="item in list"><a href="#">{{ item.name }} <span class="pull-right badge" :class="item.badge.theme">{{ item.badge.count }}</span></a>
+        </li>
       </ul>
     </div>
   </div>
@@ -20,24 +21,24 @@
 </template>
 
 <script>
-export default {
-  name: 'va-social-user-v2',
-  props: {
-    name: {
-      type: String
+  export default {
+    name: 'va-social-user-v2',
+    props: {
+      name: {
+        type: String
+      },
+      description: {
+        type: String
+      },
+      profileImage: {
+        type: String
+      },
+      list: {
+        type: Array
+      }
     },
-    description: {
-      type: String
-    },
-    profileImage: {
-      type: String
-    },
-    list: {
-      type: Array
-    }
-  },
-  created () {
+    created () {
 
+    }
   }
-}
 </script>
