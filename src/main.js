@@ -11,9 +11,9 @@ import EventBus from './lib/eventBus.js'
 import axios from 'axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import store from './store'
 
 Vue.use(ElementUI)
-
 Vue.prototype.$bus = EventBus
 Vue.prototype.$http = axios
 Vue.prototype.$http.defaults.withCredentials = true
@@ -74,6 +74,7 @@ Vue.prototype.$http.interceptors.response.use(
 new Vue({
   data: {},
   el: '#app',
+  store,
   render: h => h(App),
   router,
   created () {

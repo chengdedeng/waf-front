@@ -6,13 +6,10 @@
     <el-table-column
       fixed
       prop="route"
-      label="路由"
-      width="200">
+      label="路由">
     </el-table-column>
     <el-table-column
-      prop="status"
-      label="状态"
-      width="200">
+      label="状态">
       <template slot-scope="scope">
         <el-tag
           :type="scope.row.switch === true ? 'primary' : 'success'"
@@ -27,7 +24,7 @@
     <el-table-column
       fixed="right"
       label="操作"
-      width="200">
+      width="150">
       <template slot-scope="scope">
         <el-switch
           @change="handleSwitch($event,scope)"
@@ -36,7 +33,7 @@
           inactive-color="#ff4949">
         </el-switch>
         <el-button type="danger" icon="el-icon-delete" size="small" v-bind:disabled="scope.row.switch"
-        ></el-button>
+                   round></el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -56,6 +53,7 @@
   export default {
     data () {
       return {
+        contentHeader: 'Upstream',
         tableData: []
       }
     },
@@ -77,7 +75,6 @@
             for (let i = 0; i < response.data['value'].length; i++) {
               _this.tableData[i] = {
                 route: response.data['value'][i]['wafRoute'],
-                status: response.data['value'][i]['config']['isStart'] === true ? '开启' : '关闭',
                 switch: response.data['value'][i]['config']['isStart'],
                 servers: response.data['value'][i]['serverConfigs'].length
               }
@@ -86,9 +83,6 @@
             alert('')
           }
         })
-      },
-      handleClick (row) {
-        console.log(row)
       },
       handleSwitch (event, scope) {
         let _this = this
@@ -107,7 +101,6 @@
           if (response.data.code === 200) {
             let newRow = {
               route: scope.row.route,
-              status: event === true ? '开启' : '关闭',
               switch: event,
               servers: scope.row.servers
             }
@@ -118,6 +111,10 @@
     },
     created: function () {
       this.getData()
+      this.$store.commit('common/setContentPageName', 'Upstream')
+    },
+    destroyed: function () {
+      this.$store.commit('common/setContentPageName', '')
     }
   }
 </script>

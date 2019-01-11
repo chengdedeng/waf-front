@@ -1,4 +1,4 @@
-<template>
+<template xmlns:font-family="http://www.w3.org/1999/xhtml" xmlns:position="http://www.w3.org/1999/xhtml">
   <div class="skin-blue sidebar-mini">
     <div class="wrapper">
       <va-header></va-header>
@@ -6,12 +6,21 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <div class="tmpl" slot="up">
-            <span>菜单1</span>
-          </div>
-          <div class="tmpl" slot="down">
-            <span>菜单-1</span>
-          </div>
+          <el-row>
+            <el-row>
+              <el-col :span="12">
+                <div>
+                  <h3 class="box-title">{{this.$store.state.common.contentPageName}}</h3>
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div style="text-align: right">
+                  <el-button icon="el-icon-search" circle></el-button>
+                  <el-button type="primary" icon="el-icon-edit" circle></el-button>
+                </div>
+              </el-col>
+            </el-row>
+          </el-row>
         </section>
         <section class="content">
           <transition name="page" mode="out-in">
@@ -46,3 +55,19 @@
     }
   }
 </script>
+
+<style>
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+
+  .page-Name {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  .right {
+    position: fixed;
+    right: 15px;
+  }
+</style>
