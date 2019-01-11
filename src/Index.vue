@@ -35,11 +35,11 @@
 </template>
 
 <script>
+  import Modal from './components/Modal.vue'
   import Header from 'Header.vue'
   import Sidebar from 'Sidebar.vue'
   import Footer from 'Footer.vue'
   import slideMenuItems from './lib/slideMenuItems.js'
-  import Modal from './components/Modal.vue'
 
   export default {
     data () {
