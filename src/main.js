@@ -8,14 +8,14 @@ import Vue from 'vue'
 import router from './router'
 import App from './App'
 import EventBus from './lib/eventBus.js'
-import axios from 'axios'
+import Axios from 'axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
 
 Vue.use(ElementUI)
 Vue.prototype.$bus = EventBus
-Vue.prototype.$http = axios
+Vue.prototype.$http = Axios
 Vue.prototype.$http.defaults.withCredentials = true
 
 Object.defineProperties(Vue.prototype, {

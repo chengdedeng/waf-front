@@ -4,7 +4,6 @@
       <va-header></va-header>
       <va-sidebar :slideMenuItems="slideMenuItems"></va-sidebar>
       <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
           <el-row>
             <el-row>
@@ -15,8 +14,7 @@
               </el-col>
               <el-col :span="12">
                 <div style="text-align: right">
-                  <el-button icon="el-icon-search" circle></el-button>
-                  <el-button type="primary" icon="el-icon-edit" circle></el-button>
+                  <el-button type="primary" icon="el-icon-edit" circle @click="openModal"></el-button>
                 </div>
               </el-col>
             </el-row>
@@ -35,7 +33,7 @@
 </template>
 
 <script>
-  import Modal from './components/Modal.vue'
+  import Modal from './components/UpstreamModal.vue'
   import Header from 'Header.vue'
   import Sidebar from 'Sidebar.vue'
   import Footer from 'Footer.vue'
@@ -52,6 +50,11 @@
       'va-sidebar': Sidebar,
       'va-footer': Footer,
       Modal
+    },
+    methods: {
+      openModal () {
+        this.$bus.$emit(this.$store.state.common.contentPageName, {})
+      }
     }
   }
 </script>

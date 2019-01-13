@@ -2,6 +2,7 @@
   <el-table
     :data="tableData"
     style="width: 100%"
+    @row-click="openDetails"
     :row-class-name="tableRowClassName">
     <el-table-column
       fixed
@@ -70,7 +71,6 @@
       getData () {
         let _this = this
         this.$http.get(this.$url_config.waf_url + '/api/config/forward/http/upstream').then(function (response) {
-          console.log(response.data)
           if (response.data['code'] === 200) {
             for (let i = 0; i < response.data['value'].length; i++) {
               _this.tableData[i] = {
@@ -79,8 +79,6 @@
                 servers: response.data['value'][i]['serverConfigs'].length
               }
             }
-          } else {
-            alert('')
           }
         })
       },
@@ -107,6 +105,9 @@
             _this.$set(_this.tableData, scope.$index, newRow)
           }
         })
+      },
+      openDetails (row, event, column) {
+        alert(column)
       }
     },
     created: function () {
