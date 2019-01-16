@@ -55,6 +55,7 @@
     },
     methods: {
       submitForm (formName) {
+        let _this = this
         this.$refs[formName].validate((valid) => {
           if (valid) {
             let upstreamConfigDtoJson = JSON.stringify(this.form1)
@@ -63,8 +64,9 @@
                 'Content-Type': 'application/json'
               }
             }).then(function (response) {
+              _this.resetForm(formName)
               if (response.data.code === 200) {
-                this.$http.get(this.$url_config.waf_url + '/api/config/forward/http/upstream').then(function (response) {
+                _this.$http.get(_this.$url_config.waf_url + '/api/config/forward/http/upstream').then(function (response) {
                   if (response.data['code'] === 200) {
                     let tableData = []
                     for (let i = 0; i < response.data['value'].length; i++) {
@@ -74,6 +76,7 @@
                         servers: response.data['value'][i]['serverConfigs'].length
                       }
                     }
+                    _this.$store.commit('common/setUpstreamTable', tableData)
                   }
                 })
               }

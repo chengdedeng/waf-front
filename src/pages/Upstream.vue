@@ -1,8 +1,8 @@
 <template>
   <el-table
-    :data="tableData"
+    :data="this.$store.state.common.upstreamTable"
     style="width: 100%"
-    @row-click="openDetails"
+    @cell-dblclick="openDetails"
     :row-class-name="tableRowClassName">
     <el-table-column
       fixed
@@ -23,8 +23,9 @@
       label="服务器数量">
     </el-table-column>
     <el-table-column
+      prop="switch"
       fixed="right"
-      label="操作"
+      label="开关"
       width="150">
       <template slot-scope="scope">
         <el-switch
@@ -52,12 +53,6 @@
 
 <script>
   export default {
-    data () {
-      return {
-        contentHeader: 'Upstream',
-        tableData: []
-      }
-    },
     methods: {
       tableRowClassName ({row}) {
         if (row['switch'] === false) {
@@ -72,13 +67,15 @@
         let _this = this
         this.$http.get(this.$url_config.waf_url + '/api/config/forward/http/upstream').then(function (response) {
           if (response.data['code'] === 200) {
+            let upstreamTable = []
             for (let i = 0; i < response.data['value'].length; i++) {
-              _this.tableData[i] = {
+              upstreamTable[i] = {
                 route: response.data['value'][i]['wafRoute'],
                 switch: response.data['value'][i]['config']['isStart'],
                 servers: response.data['value'][i]['serverConfigs'].length
               }
             }
+            _this.$store.commit('common/setUpstreamTable', upstreamTable)
           }
         })
       },
@@ -97,17 +94,14 @@
           }
         }).then(function (response) {
           if (response.data.code === 200) {
-            let newRow = {
-              route: scope.row.route,
-              switch: event,
-              servers: scope.row.servers
-            }
-            _this.$set(_this.tableData, scope.$index, newRow)
+            _this.getData()
           }
         })
       },
-      openDetails (row, event, column) {
-        alert(column)
+      openDetails (row, column, cell, event) {
+        if (column['property'] !== 'switch') {
+          console.log(column)
+        }
       }
     },
     created: function () {
