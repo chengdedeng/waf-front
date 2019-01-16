@@ -34,7 +34,8 @@
           active-color="#13ce66"
           inactive-color="#ff4949">
         </el-switch>
-        <el-button type="danger" icon="el-icon-delete" size="small" v-bind:disabled="scope.row.switch"
+        <el-button type="danger" @click="handleDelete($event,scope)" icon="el-icon-delete" size="small"
+                   v-bind:disabled="scope.row.switch"
                    round></el-button>
       </template>
     </el-table-column>
@@ -93,6 +94,18 @@
             'Content-Type': 'application/json'
           }
         }).then(function (response) {
+          if (response.data.code === 200) {
+            _this.getData()
+          }
+        })
+      },
+      handleDelete (event, scope) {
+        let _this = this
+        let upstreamConfigDto = {
+          wafRoute: ''
+        }
+        upstreamConfigDto.wafRoute = scope.row.route
+        this.$http.delete(this.$url_config.waf_url + '/api/config/forward/http/upstream', {data: upstreamConfigDto}).then(function (response) {
           if (response.data.code === 200) {
             _this.getData()
           }
