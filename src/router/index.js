@@ -15,7 +15,7 @@ export default new Router({
       path: '/',
       component: Index,
       children: [
-        {path: '', component: Cookie},
+        {path: '', component: Upstream},
         {
           path: 'config/arg',
           name: 'Arg',

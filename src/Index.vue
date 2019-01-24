@@ -14,7 +14,7 @@
               </el-col>
               <el-col :span="12">
                 <div style="text-align: right">
-                  <el-button type="primary" icon="el-icon-edit" circle @click="openModal"></el-button>
+                  <el-button type="primary" icon="el-icon-edit" circle @click="addConfig"></el-button>
                 </div>
               </el-col>
             </el-row>
@@ -26,14 +26,14 @@
           </transition>
         </section>
       </div>
-      <Modal></Modal>
+      <v-modal v-if="modalIsShow"></v-modal>
       <va-footer></va-footer>
     </div>
   </div>
 </template>
 
 <script>
-  import Modal from './components/UpstreamModal.vue'
+  import VModal from './components/VModal.vue'
   import Header from 'Header.vue'
   import Sidebar from 'Sidebar.vue'
   import Footer from 'Footer.vue'
@@ -49,11 +49,16 @@
       'va-header': Header,
       'va-sidebar': Sidebar,
       'va-footer': Footer,
-      Modal
+      'v-modal': VModal
+    },
+    computed: {
+      modalIsShow () {
+        return this.$store.state.common.modalIsShow
+      }
     },
     methods: {
-      openModal () {
-        this.$bus.$emit(this.$store.state.common.contentPageName, {})
+      addConfig () {
+        this.openModal('create-' + this.$store.state.common.contentPageName.toLocaleLowerCase() + '-modal')
       }
     }
   }

@@ -70,6 +70,15 @@ Vue.prototype.$http.interceptors.response.use(
   }
 )
 
+Vue.prototype.openModal = function (view) {
+  store.dispatch('common/changeModalShow', true)
+  store.dispatch('common/changeModalView', view)
+}
+
+Vue.prototype.closeModal = function () {
+  store.dispatch('common/changeModalShow', false)
+}
+
 /* eslint-disable no-new */
 new Vue({
   data: {},
