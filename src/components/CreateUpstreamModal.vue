@@ -70,7 +70,7 @@
                         servers: response.data['value'][i]['serverConfigs'].length
                       }
                     }
-                    _this.$store.commit('common/setUpstreamTable', tableData)
+                    _this.$store.dispatch('common/changeUpstreamListTable', tableData)
                   }
                 })
               }

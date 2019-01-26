@@ -76,7 +76,7 @@
                 servers: response.data['value'][i]['serverConfigs'].length
               }
             }
-            _this.$store.commit('common/setUpstreamTable', upstreamTable)
+            _this.$store.commit('common/CHANGE_UPSTREAM_LIST_TABLE', upstreamTable)
           }
         })
       },
@@ -119,10 +119,10 @@
     },
     created: function () {
       this.getData()
-      this.$store.commit('common/setContentPageName', 'Upstream')
+      this.$store.commit('common/CHANGE_PAGE_NAME', 'Upstream')
     },
     destroyed: function () {
-      this.$store.commit('common/setContentPageName', '')
+      this.$store.dispatch('common/changePageName', '')
     }
   }
 </script>

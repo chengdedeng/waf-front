@@ -6,10 +6,10 @@ const state = {
 }
 
 const mutations = {
-  setContentPageName (state, name, rootState) {
+  CHANGE_PAGE_NAME (state, name) {
     state.contentPageName = name
   },
-  setUpstreamTable (state, upstreamTable, rootState) {
+  CHANGE_UPSTREAM_LIST_TABLE (state, upstreamTable) {
     state.upstreamTable = upstreamTable
   },
   CHANGE_MODAL_SHOW (state, isShow) {
@@ -21,11 +21,17 @@ const mutations = {
 }
 
 const actions = {
-  changeModalShow (context, state) {
-    context.commit('CHANGE_MODAL_SHOW', state)
+  changeModalShow (context, isShow) {
+    context.commit('CHANGE_MODAL_SHOW', isShow)
   },
   changeModalView (context, view) {
     context.commit('CHANGE_MODAL_VIEW', view)
+  },
+  changePageName (context, name) {
+    context.commit('CHANGE_PAGE_NAME', name)
+  },
+  changeUpstreamListTable (context, upstreamTable) {
+    context.commit('CHANGE_UPSTREAM_LIST_TABLE', upstreamTable)
   }
 }
 
