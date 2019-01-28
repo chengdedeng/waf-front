@@ -26,7 +26,7 @@
           </transition>
         </section>
       </div>
-      <v-modal v-if="modalIsShow"></v-modal>
+      <v-modal></v-modal>
       <va-footer></va-footer>
     </div>
   </div>
@@ -58,7 +58,9 @@
     },
     methods: {
       addConfig () {
-        this.openModal('create-' + this.$store.state.common.contentPageName.toLocaleLowerCase() + '-modal')
+        let modal = 'create-' + this.$store.state.common.contentPageName.toLocaleLowerCase() + '-modal'
+        this.openModal(modal)
+        this.$bus.$emit(modal)
       }
     }
   }

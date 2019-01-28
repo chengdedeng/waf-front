@@ -6,7 +6,7 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
             aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="bsModalLabel">新增路由</h4>
+          <h4 class="modal-title" id="bsModalLabel">新增路由B</h4>
         </div>
         <div class="modal-body">
           <el-form :model="form1" ref="form1" label-width="100px">
@@ -33,16 +33,9 @@
 <script>
   export default {
     mounted () {
-      this.$bus.$on('Upstream', (args) => {
+      $('#bsModal').modal('show')
+      this.$bus.$on('upstream-config-modal', (args) => {
         $('#bsModal').modal('show')
-        console.log('show')
-      })
-      $('#bsModal').on('show.bs.modal', (e) => {
-        console.log('show.bs.modal')
-      })
-
-      $('#bsModal').on('hidden.bs.modal', (e) => {
-        console.log('hidden.bs.modal')
       })
     },
     data () {
@@ -52,6 +45,9 @@
           isStart: ''
         }
       }
+    },
+    beforeDestroy () {
+      this.$bus.$off('upstream-config-modal')
     },
     methods: {
       submitForm (formName) {

@@ -5,7 +5,8 @@
 </template>
 
 <script>
-  import createUpstreamModal from './CreateUpstreamModal.vue'
+  import createUpstreamModal from './CreateUpstreamModal'
+  import upstreamConfigModal from './UpstreamConfigModal'
 
   export default {
     computed: {
@@ -14,7 +15,8 @@
       }
     },
     components: {
-      'create-upstream-modal': createUpstreamModal
+      'create-upstream-modal': createUpstreamModal,
+      'upstream-config-modal': upstreamConfigModal
     }
   }
 </script>
