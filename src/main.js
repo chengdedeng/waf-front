@@ -51,7 +51,7 @@ Vue.prototype.getCookie = function (name) {
 Vue.prototype.delCookie = function (name) {
   let exp = new Date()
   exp.setTime(exp.getTime() - 1)
-  let cval = getCookie(name)
+  let cval = Vue.prototype.getCookie(name)
   if (cval != null) {
     document.cookie = name + '=' + cval + ';expires=' + exp.toGMTString()
   }
@@ -60,7 +60,7 @@ Vue.prototype.delCookie = function (name) {
 Vue.prototype.$http.interceptors.response.use(
   response => {
     if (response.status === 200 && response.data.code === 401) {
-      delCookie('WAFTOKEN')
+      Vue.prototype.delCookie('WAFTOKEN')
       router.push('/login')
     }
     return response
