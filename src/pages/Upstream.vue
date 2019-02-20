@@ -2,40 +2,47 @@
   <el-table
     :data="this.$store.state.common.upstreamTable"
     style="width: 100%"
-    @cell-dblclick="openDetails"
+    @row-click="openDetails"
     :row-class-name="tableRowClassName">
     <el-table-column
       fixed
-      prop="route"
+      prop="index"
+      label="序号">
+      <template slot-scope="scope">
+        {{scope.$index+1}}
+      </template>
+    </el-table-column>
+    <el-table-column
+      prop="upstream.wafRoute"
       label="路由">
     </el-table-column>
     <el-table-column
       label="状态">
       <template slot-scope="scope">
         <el-tag
-          :type="scope.row.switch === true ? 'primary' : 'success'"
-          close-transition>{{scope.row.switch===true?'已激活':'未激活'}}
+          :type="scope.row.upstream.config.isStart === true ? 'primary' : 'success'"
+          close-transition>{{scope.row.upstream.config.isStart===true?'已激活':'未激活'}}
         </el-tag>
       </template>
     </el-table-column>
     <el-table-column
-      prop="servers"
+      prop="upstream.serverConfigs.length"
       label="服务器数量">
     </el-table-column>
     <el-table-column
-      prop="switch"
+      prop="upstream.config.isStart"
       fixed="right"
       label="开关"
       width="150">
       <template slot-scope="scope">
         <el-switch
           @change="handleSwitch($event,scope)"
-          v-model="scope.row.switch"
+          v-model="scope.row.upstream.config.isStart"
           active-color="#13ce66"
           inactive-color="#ff4949">
         </el-switch>
         <el-button type="danger" @click="handleDelete($event,scope)" icon="el-icon-delete" size="small"
-                   v-bind:disabled="scope.row.switch"
+                   v-bind:disabled="scope.row.upstream.config.isStart"
                    round></el-button>
       </template>
     </el-table-column>
@@ -56,9 +63,9 @@
   export default {
     methods: {
       tableRowClassName ({row}) {
-        if (row['switch'] === false) {
+        if (row.upstream.config['isStart'] === false) {
           return 'warning-row'
-        } else if (row['switch'] === true) {
+        } else if (row.upstream.config['isStart'] === true) {
           return 'success-row'
         } else {
           return ''
@@ -71,9 +78,7 @@
             let upstreamTable = []
             for (let i = 0; i < response.data['value'].length; i++) {
               upstreamTable[i] = {
-                route: response.data['value'][i]['wafRoute'],
-                switch: response.data['value'][i]['config']['isStart'],
-                servers: response.data['value'][i]['serverConfigs'].length
+                upstream: response.data['value'][i]
               }
             }
             _this.$store.commit('common/CHANGE_UPSTREAM_LIST_TABLE', upstreamTable)
@@ -87,7 +92,7 @@
           wafRoute: ''
         }
         upstreamConfigDto.isStart = event
-        upstreamConfigDto.wafRoute = scope.row.route
+        upstreamConfigDto.wafRoute = scope.row.upstream.wafRoute
         let upstreamConfigDtoJson = JSON.stringify(upstreamConfigDto)
         this.$http.put(this.$url_config.waf_url + '/api/config/forward/http/upstream', upstreamConfigDtoJson, {
           headers: {
@@ -104,17 +109,31 @@
         let upstreamConfigDto = {
           wafRoute: ''
         }
-        upstreamConfigDto.wafRoute = scope.row.route
+        upstreamConfigDto.wafRoute = scope.row.upstream.wafRoute
         this.$http.delete(this.$url_config.waf_url + '/api/config/forward/http/upstream', {data: upstreamConfigDto}).then(function (response) {
           if (response.data.code === 200) {
             _this.getData()
           }
         })
       },
-      openDetails (row, column, cell, event) {
-        if (column['property'] !== 'switch') {
-          console.log(column)
+      openDetails (row, event, column) {
+        if (column['property'] !== 'upstream.config.isStart') {
+          let modal = 'upstream-config-modal'
+          this.openModal(modal)
+          this.$store.commit('common/CHANGE_ROW_NUM', this.getRowIndex(row))
+          this.$bus.$emit(modal)
         }
+      },
+      getRowIndex (row) {
+        let i = 0
+        for (let upstream of this.$store.state.common.upstreamTable) {
+          if (upstream.upstream.wafRoute === row.upstream.wafRoute) {
+            break
+          } else {
+            i++
+          }
+        }
+        return i
       }
     },
     created: function () {

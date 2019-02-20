@@ -64,15 +64,13 @@
               if (response.data.code === 200) {
                 _this.$http.get(_this.$url_config.waf_url + '/api/config/forward/http/upstream').then(function (response) {
                   if (response.data['code'] === 200) {
-                    let tableData = []
+                    let upstreamTable = []
                     for (let i = 0; i < response.data['value'].length; i++) {
-                      tableData[i] = {
-                        route: response.data['value'][i]['wafRoute'],
-                        switch: response.data['value'][i]['config']['isStart'],
-                        servers: response.data['value'][i]['serverConfigs'].length
+                      upstreamTable[i] = {
+                        upstream: response.data['value'][i]
                       }
                     }
-                    _this.$store.commit('common/setUpstreamTable', tableData)
+                    _this.$store.commit('common/CHANGE_UPSTREAM_LIST_TABLE', upstreamTable)
                   }
                 })
               }

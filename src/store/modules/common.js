@@ -1,7 +1,8 @@
 const state = {
   contentPageName: '',
   upstreamTable: [],
-  modalCurrentView: ''
+  modalCurrentView: '',
+  rowNum: ''
 }
 
 const mutations = {
@@ -13,6 +14,9 @@ const mutations = {
   },
   CHANGE_MODAL_VIEW (state, view) {
     state.modalCurrentView = view
+  },
+  CHANGE_ROW_NUM (state, num) {
+    state.rowNum = num
   }
 }
 

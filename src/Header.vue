@@ -58,7 +58,7 @@
   export default {
     methods: {
       logout: function () {
-        this.delCookie('JSESSIONID')
+        this.delCookie('WAFTOKEN')
       }
     }
   }
