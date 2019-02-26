@@ -5,6 +5,7 @@ import Login from 'Login.vue'
 import Upstream from 'pages/Upstream.vue'
 import Arg from 'pages/Arg.vue'
 import Cookie from 'pages/Cookie.vue'
+import Server from '../pages/Server'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
           path: 'config/upstream',
           name: 'Upstream',
           component: Upstream
+        },
+        {
+          path: 'config/upstream/server',
+          name: 'Server',
+          component: Server
         }
       ]
     },

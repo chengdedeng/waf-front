@@ -118,10 +118,8 @@
       },
       openDetails (row, event, column) {
         if (column['property'] !== 'upstream.config.isStart') {
-          let modal = 'upstream-config-modal'
-          this.openModal(modal)
           this.$store.commit('common/CHANGE_ROW_NUM', this.getRowIndex(row))
-          this.$bus.$emit(modal)
+          this.$router.push('/config/upstream/server')
         }
       },
       getRowIndex (row) {

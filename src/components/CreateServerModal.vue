@@ -6,15 +6,31 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
             aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="bsModalLabel">新增Upstream</h4>
+          <h4 class="modal-title" id="bsModalLabel">新增Server</h4>
         </div>
         <div class="modal-body">
           <el-form :model="form" ref="form" label-width="100px">
             <el-form-item
-              prop="wafRoute"
-              label="路由"
-              :rules="[{ required: true, message: '路由地址不能为空', trigger: 'blur' }]">
-              <el-input v-model="form.wafRoute"></el-input>
+              label="IP"
+              :rules="[{ required: true, message: 'IP地址不能为空', trigger: 'blur' }]">
+              <el-input v-model="form.ip"></el-input>
+            </el-form-item>
+            <el-form-item
+              label="端口"
+              :rules="[{ required: true, message: '端口不能为空', trigger: 'blur' }]">
+              <el-input v-model="form.port"></el-input>
+            </el-form-item>
+            <el-form-item
+              label="权重"
+              :rules="[{ required: true, message: '权重不能为空', trigger: 'blur' }]">
+              <el-select v-model="form.weight" placeholder="请选择">
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
             </el-form-item>
             <el-form-item label="开启" prop="isStart">
               <el-switch v-model="form.isStart"></el-switch>
@@ -34,28 +50,64 @@
   export default {
     mounted () {
       $('#bsModal').modal('show')
-      this.$bus.$on('create-upstream-modal', (args) => {
+      this.$bus.$on('create-server-modal', (args) => {
         $('#bsModal').modal('show')
       })
     },
     data () {
       return {
+        options: [{
+          value: 1,
+          label: '1'
+        }, {
+          value: 2,
+          label: '2'
+        }, {
+          value: 3,
+          label: '3'
+        }, {
+          value: 4,
+          label: '4'
+        }, {
+          value: 5,
+          label: '5'
+        }, {
+          value: 6,
+          label: '6'
+        }, {
+          value: 7,
+          label: '7'
+        }, {
+          value: 8,
+          label: '8'
+        }, {
+          value: 9,
+          label: '9'
+        }, {
+          value: 10,
+          label: '10'
+        }
+        ],
         form: {
           wafRoute: '',
-          isStart: ''
+          ip: '',
+          port: '',
+          isStart: '',
+          weight: ''
         }
       }
     },
     beforeDestroy () {
-      this.$bus.$off('create-upstream-modal')
+      this.$bus.$off('create-server-modal')
     },
     methods: {
       submitForm (formName) {
+        this.form.wafRoute = this.$store.state.common.upstreamTable[this.$store.state.common.rowNum].upstream['wafRoute']
         let _this = this
         this.$refs[formName].validate((valid) => {
           if (valid) {
             let upstreamConfigDtoJson = JSON.stringify(this.form)
-            this.$http.put(this.$url_config.waf_url + '/api/config/forward/http/upstream', upstreamConfigDtoJson, {
+            this.$http.put(this.$url_config.waf_url + '/api/config/forward/http/upstream/server', upstreamConfigDtoJson, {
               headers: {
                 'Content-Type': 'application/json'
               }

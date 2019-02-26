@@ -6,7 +6,7 @@
 
 <script>
   import createUpstreamModal from './CreateUpstreamModal'
-  import upstreamConfigModal from './UpstreamConfigModal'
+  import createServerModal from './CreateServerModal'
 
   export default {
     computed: {
@@ -16,7 +16,7 @@
     },
     components: {
       'create-upstream-modal': createUpstreamModal,
-      'upstream-config-modal': upstreamConfigModal
+      'create-server-modal': createServerModal
     }
   }
 </script>
